@@ -6,16 +6,14 @@
 #include "parasite/config.h"
 #include "parasite/mqtt_client.h"
 #include "parasite/pwm.h"
-#include "parasite/rtc_counter.h"
 #include "parasite/soil_moisture.h"
 #include "parasite/wifi.h"
 
+// RTC_DATA_ATTR makes these data persistent across deep-sleep cycles.
 RTC_DATA_ATTR unsigned int boot_count = 0;
 RTC_DATA_ATTR unsigned int clean_exit_count = 0;
 
 unsigned long t0 = millis();
-
-auto& counter = homeauto::rtc::RTCCounter::GetInstance();
 
 void run() {
   parasite::pwm::StartPWM();
