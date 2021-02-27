@@ -1,0 +1,6 @@
+.pio
+*.swp
+.vscode
+
+# Config contains sensitive data. Use src/config_template.h as a base for your own.
+lib/parasite/parasite/config.h
