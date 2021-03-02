@@ -15,6 +15,7 @@ class MQTTClient {
     broker_ip_.fromString(PRST_MQTT_BROKER_IP);
     pubsub_client_.setServer(broker_ip_, PRST_MQTT_BROKER_PORT);
     pubsub_client_.setClient(wifi_client_);
+    pubsub_client_.setSocketTimeout(PRST_MQTT_CONN_TIMEOUT);
   }
 
   // Tries to reconnect if needed

@@ -57,8 +57,6 @@
 #define PRST_BM_R2_DIVIDER 470
 
 // Deep sleep.
-#define PRST_S_TO_US_FACTOR 1000000
 #define PRST_DS_TIME_TO_SLEEP_IN_SECONDS 10 * 60
-#define PRST_DS_TIME_TO_SLEEP_US
 
 #endif  // _PARASITE_CONFIG_H_

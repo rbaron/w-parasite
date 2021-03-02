@@ -7,15 +7,15 @@
 namespace parasite {
 namespace batt {
 namespace {
-constexpr int kNReads = 50;
+constexpr int kNReads = 32;
 constexpr int kDelayBeforeReadMS = 1;
 
 int ReadAnalogInput() {
   adc1_channel_t channel =
       static_cast<adc1_channel_t>(digitalPinToAnalogChannel(PRST_BM_PIN));
-  // 12 bit resolution: values in [0, 4095]
+  // 12 bit resolution: values in [0, 4095].
   adc1_config_width(ADC_WIDTH_BIT_12);
-  // Read value is divided by 3.6
+  // Read value is divided by 3.6.
   adc1_config_channel_atten(channel, ADC_ATTEN_DB_11);
   return adc1_get_raw(channel);
 }
