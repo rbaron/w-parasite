@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name digikey-footprints)(type KiCad)(uri /Users/rbaron/dev/nightoid/kicad/digikey-kicad-library/digikey-footprints.pretty)(options "")(descr ""))
+  (lib (name Battery)(type KiCad)(uri /Users/rbaron/dev/homeauto/uc/electronics/libs/Battery.pretty)(options "")(descr ""))
+  (lib (name footprints)(type KiCad)(uri /Users/rbaron/dev/homeauto/uc/electronics/parasite/lib/footprints)(options "")(descr ""))
+  (lib (name OSHW-logo)(type Legacy)(uri /Users/rbaron/dev/homeauto/uc/electronics/parasite/lib/footprints/OSHW-logo.mod)(options "")(descr ""))
+)

@@ -25,7 +25,8 @@ To estimate the battery life and discuss our choices, we can agree on a few prem
 I have experimented with two main types of battery:
 - LIR2450 Li-Ion coin cells. They are super compact (as in the photo above). With around 120mAh, they can only source short peaks  200mAh, which is below what the ESP32 expects. Using them poses a challenge on energy and current, and that's why we like it;
 - LiPo/Li-Ion cells. They are generally a lot bigger but usually pack up to 3000mAh. They take a lot of space but comfortably powers w-parasite for well over a year;
--
+
+
 ![Back](assets/back2.png)
 
 [This video from Andreas Spiess](https://www.youtube.com/watch?v=heD1zw3bMhw&t=120s) presents a great overview on battery options.

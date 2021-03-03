@@ -1,0 +1,297 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Connector_Conn_01x02_Female
+#
+DEF Connector_Conn_01x02_Female J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Conn_01x02_Female" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+A 0 -100 20 901 -901 1 1 6 N 0 -80 0 -120
+A 0 0 20 901 -901 1 1 6 N 0 20 0 -20
+P 2 1 1 6 -50 -100 -20 -100 N
+P 2 1 1 6 -50 0 -20 0 N
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_TestPoint
+#
+DEF Connector_TestPoint TP 0 30 N N 1 F N
+F0 "TP" 0 270 50 H V C CNN
+F1 "Connector_TestPoint" 0 200 50 H V C CNN
+F2 "" 200 0 50 H I C CNN
+F3 "" 200 0 50 H I C CNN
+$FPLIST
+ Pin*
+ Test*
+$ENDFPLIST
+DRAW
+C 0 130 30 0 1 0 N
+X 1 1 0 0 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_C_Small
+#
+DEF Device_C_Small C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "Device_C_Small" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 13 -60 -20 60 -20 N
+P 2 0 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_R_Small_US
+#
+DEF Device_R_Small_US R 0 10 N N 1 F N
+F0 "R" 30 20 50 H V L CNN
+F1 "Device_R_Small_US" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+P 5 1 1 0 0 0 40 -15 0 -30 -40 -45 0 -60 N
+P 5 1 1 0 0 60 40 45 0 30 -40 15 0 0 N
+X ~ 1 0 100 40 D 50 50 1 1 P
+X ~ 2 0 -100 40 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Diode_LL4148
+#
+DEF Diode_LL4148 D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Diode_LL4148" 0 -100 50 H V C CNN
+F2 "Diode_SMD:D_MiniMELF" 0 -175 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS LL4448
+$FPLIST
+ D*MiniMELF*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 50 -50 -50 N
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Transistor_BJT_MMBT3904
+#
+DEF Transistor_BJT_MMBT3904 Q 0 0 Y N 1 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "Transistor_BJT_MMBT3904" 200 0 50 H V L CNN
+F2 "Package_TO_SOT_SMD:SOT-23" 200 -75 50 H I L CIN
+F3 "" 0 0 50 H I L CNN
+ALIAS BC818 BC847 BC848 BC849 BC850 MMBT3904 MMBT5550L MMBT5551L
+$FPLIST
+ SOT?23*
+$ENDFPLIST
+DRAW
+C 50 0 111 0 1 10 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 50 -70 70 -50 90 -90 50 -70 50 -70 F
+X B 1 -200 0 225 R 50 50 1 1 I
+X E 2 100 -200 100 U 50 50 1 1 P
+X C 3 100 200 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# dk_RF-Transceiver-Modules_ESP32-WROOM-32
+#
+DEF dk_RF-Transceiver-Modules_ESP32-WROOM-32 MOD 0 40 Y Y 1 F N
+F0 "MOD" -400 50 60 H V L CNN
+F1 "dk_RF-Transceiver-Modules_ESP32-WROOM-32" 200 -1000 60 V V C CNN
+F2 "digikey-footprints:ESP32-WROOM-32D" 200 200 60 H I L CNN
+F3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" 200 300 60 H I L CNN
+F4 "1904-1010-1-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "ESP32-WROOM-32" 200 500 60 H I L CNN "MPN"
+F6 "RF/IF and RFID" 200 600 60 H I L CNN "Category"
+F7 "RF Transceiver Modules" 200 700 60 H I L CNN "Family"
+F8 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/espressif-systems/ESP32-WROOM-32/1904-1010-1-ND/8544305" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "SMD MODULE, ESP32-D0WDQ6, 32MBIT" 200 1000 60 H I L CNN "Description"
+F11 "Espressif Systems" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+S -400 0 800 -2000 0 1 0 f
+X GND 1 0 -2100 100 U 50 50 1 1 W
+X IO25 10 -500 -1700 100 R 50 50 1 1 B
+X IO26 11 -500 -1800 100 R 50 50 1 1 B
+X IO27 12 -500 -1900 100 R 50 50 1 1 B
+X IO14 13 -500 -800 100 R 50 50 1 1 B
+X IO12 14 -500 -600 100 R 50 50 1 1 B
+X GND 15 100 -2100 100 U 50 50 1 1 W
+X IO13 16 -500 -700 100 R 50 50 1 1 B
+X SHD/SD2 17 900 -300 100 L 50 50 1 1 B
+X SWP/SD3 18 900 -400 100 L 50 50 1 1 B
+X SCS/CMD 19 900 -500 100 L 50 50 1 1 B
+X 3V3 2 200 100 100 D 50 50 1 1 W
+X SCK/CLK 20 900 -600 100 L 50 50 1 1 B
+X SDO/SD0 21 900 -700 100 L 50 50 1 1 B
+X SDI/SD1 22 900 -800 100 L 50 50 1 1 B
+X IO15 23 -500 -900 100 R 50 50 1 1 B
+X IO2 24 -500 -300 100 R 50 50 1 1 B
+X IO0 25 -500 -200 100 R 50 50 1 1 B
+X IO4 26 -500 -400 100 R 50 50 1 1 B
+X IO16 27 -500 -1000 100 R 50 50 1 1 B
+X IO17 28 -500 -1100 100 R 50 50 1 1 B
+X IO5 29 -500 -500 100 R 50 50 1 1 B
+X EN 3 -500 -100 100 R 50 50 1 1 I
+X IO18 30 -500 -1200 100 R 50 50 1 1 B
+X IO19 31 -500 -1300 100 R 50 50 1 1 B
+X NC 32 800 -1700 100 L 50 50 1 1 N N
+X IO21 33 -500 -1400 100 R 50 50 1 1 B
+X RXD0 34 900 -1000 100 L 50 50 1 1 B
+X TXD0 35 900 -900 100 L 50 50 1 1 B
+X IO22 36 -500 -1500 100 R 50 50 1 1 B
+X IO23 37 -500 -1600 100 R 50 50 1 1 B
+X GND 38 200 -2100 100 U 50 50 1 1 W
+X GND 39 300 -2100 100 U 50 50 1 1 W
+X SENSOR_VP 4 900 -100 100 L 50 50 1 1 I
+X SENSOR_VN 5 900 -200 100 L 50 50 1 1 I
+X IO34 6 900 -1300 100 L 50 50 1 1 B
+X IO35 7 900 -1200 100 L 50 50 1 1 B
+X IO32 8 900 -1500 100 L 50 50 1 1 B
+X IO33 9 900 -1400 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# ht7333-a_HT7333-A
+#
+DEF ht7333-a_HT7333-A L 0 40 Y Y 1 F N
+F0 "L" -150 150 60 H V C CNN
+F1 "ht7333-a_HT7333-A" -100 250 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+S -200 -100 300 200 0 1 0 N
+X GND 1 150 -300 200 U 50 50 1 1 I
+X VIN 2 -400 0 200 R 50 50 1 1 I
+X VOUT 3 500 150 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# parasite-rescue_BS-7-dk_Battery-Holders-Clips-Contacts
+#
+DEF parasite-rescue_BS-7-dk_Battery-Holders-Clips-Contacts BAT 0 40 N Y 1 F N
+F0 "BAT" -50 150 60 H V R CNN
+F1 "parasite-rescue_BS-7-dk_Battery-Holders-Clips-Contacts" -50 -150 60 H V R CNN
+F2 "digikey-footprints:Battery_Holder_Coin_2032_BS-7" 200 200 60 H I L CNN
+F3 "http://www.memoryprotectiondevices.com/datasheets/BS-7-datasheet.pdf" 200 300 60 V I L CNN
+F4 "BS-7-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "BS-7" 200 500 60 H I L CNN "MPN"
+F6 "Battery Products" 200 600 60 H I L CNN "Category"
+F7 "Battery Holders, Clips, Contacts" 200 700 60 H I L CNN "Family"
+F8 "http://www.memoryprotectiondevices.com/datasheets/BS-7-datasheet.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/mpd-memory-protection-devices/BS-7/BS-7-ND/389447" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "BATTERY HOLDER COIN 20MM PC PIN" 200 1000 60 H I L CNN "Description"
+F11 "MPD (Memory Protection Devices)" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+P 2 1 1 0 0 -100 0 -75 N
+P 2 1 1 0 0 75 0 100 N
+P 2 1 1 0 50 -75 -50 -75 N
+P 2 1 1 0 50 25 -50 25 N
+P 2 1 1 0 50 90 50 130 N
+P 2 1 1 0 70 110 30 110 N
+P 2 1 1 0 100 -25 -100 -25 N
+P 2 1 1 0 100 75 -100 75 N
+X ~ Neg 0 -200 100 U 50 50 1 1 w
+X ~ Pos 0 200 100 D 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
+# parasite_XB3303A
+#
+DEF parasite_XB3303A U 0 40 Y Y 1 F N
+F0 "U" 0 -400 50 H V C CNN
+F1 "parasite_XB3303A" 0 350 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -400 300 350 -300 0 1 0 N
+X VM 1 -500 0 100 R 50 50 1 1 w
+X VDD 2 450 -200 100 L 50 50 1 1 P
+X GND 3 450 150 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power_+3.3V
+#
+DEF power_+3.3V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+3.3V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS +3.3V
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_+BATT
+#
+DEF power_+BATT #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+BATT" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +BATT 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_GND
+#
+DEF power_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_PWR_FLAG
+#
+DEF power_PWR_FLAG #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "power_PWR_FLAG" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
+ENDDRAW
+ENDDEF
+#
+#End Library
