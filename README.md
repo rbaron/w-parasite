@@ -1,7 +1,7 @@
 # w-parasite
 
-![Front](assets/front.jpg)
-![Back](assets/back.jpg)
+![Front](assets/photos/resized/front.jpg)
+![Back](assets/photos/resized/back.jpg)
 
 w-parasite is an open source, WiFi-enabled soil moisture sensor for house plants.
 
@@ -31,7 +31,7 @@ I have experimented with two main types of battery:
 - LiPo/Li-Ion cells. They are generally a lot bigger but usually pack up to 3000mAh. They take a lot of space but comfortably powers w-parasite for well over a year;
 
 
-![Back](assets/back2.png)
+![Back with two w-parasites with different batteries](assets/photos/resized/back2.png)
 
 I put together [this spreadsheet](https://docs.google.com/spreadsheets/d/1Lt3Obveo7YzpxWigAVeM2rHjrGED6iG8pZ1Y3q1cldg/edit#gid=0) to estimate battery life. Here are some example scenarios:
 - LIR2450 cell (120mAh), transmitting every 30 minutes: around 80-90 days.
@@ -54,6 +54,9 @@ Ideas for improvements go in the direction of battery saving by shaving off prec
 Excellent question! With BLE, we can work with much lower currents, and we can power the board with even cheaper batteries like the ubiquitous CR2032. SoCs like the [nRF5](https://www.nordicsemi.com/Products/Low-power-short-range-wireless) family from Nordic are much better suited for ultra low power applications. They idle at less than 1uA and can transmit with ~5mA (compare with 100-200mA for the ESP32 + WiFi)! I believe they are a better fit for battery-powered, intermittent sensors like this one. Moreover, ESP32, _specially_ with WiFi is notoriously power hungry. Even if we implement all the tricks in the book, we won't likely match the power efficiency of BLE-only chips.
 
 With all that out of the way, if we power this with a beefier LiPo/Li-Ion battery, we can hopefuly already run for over a year on a single charge, with the added advantage of having a simpler architechure and more friendly - the sensor talks directly to your MQTT broker. Additionally, BLE devices usually have a much lower range and often require bridges for integrating with the rest of our system.
+
+# News & Updates
+For the freshest w-parasite updates, follow [@rbaron_](https://twitter.com/rbaron_).
 
 # License
 The hardware and associated design files are released under the [Creative Commons CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
