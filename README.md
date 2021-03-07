@@ -16,6 +16,13 @@ An [ESP32](https://www.espressif.com/en/products/socs/esp32) sits at the heart o
 
 The board can be powered with LiPo/Li-Ion batteries. There is a battery clip for rechargeable LIR2450 batteries, as well as a possibility for soldering a JST connector for beefier LiPo/Li-Ion batteries.
 
+# Moisture Sensor
+To measure the soil moisture, two PCB traces act like a disguised capacitor. These are the two large copper traces on the bottom of the board, on the part that goes into the soil. The capacitance between these two traces vary according to the amount of water around them, and we exploit that phenomenom to infer the soil moisture.
+
+![A picture of the sensor in the ground](assets/photos/resized/plant3.jpeg)
+
+[This great post](https://wemakethings.net/2012/09/26/capacitance_measurement/) on wemakethings goes into detail about the inner workings of capacitive soil moisture sensors. I also expanded a little bit on the topic it in [here](https://twitter.com/rbaron_/status/1367182806368071685).
+
 # Repo Organization
 * [`code/`](./code/): Software. It's an [arduino-esp32](https://github.com/espressif/arduino-esp32/) [PlatformIO](https://platformio.org/) project;
 * [`kicad/`](./kicad/): Hardware. It's a [KiCad](https://kicad.org/) project with the electronics schematic, PCB layout & fabrication files;
