@@ -57,8 +57,8 @@ void run() {
 
   mqtt_client.Publish(PRST_MQTT_TOPIC_SOIL_MOISTURE_PERCENT,
                       moisture.percentage, true);
-  mqtt_client.Publish(PRST_MQTT_TOPIC_SOIL_MOISTURE_RAW, moisture.raw, true);
   mqtt_client.Publish(PRST_MQTT_TOPIC_BATT_VOLTAGE, batt.voltage, true);
+  mqtt_client.Publish(PRST_MQTT_TOPIC_SOIL_MOISTURE_RAW, moisture.raw, true);
   mqtt_client.Publish(PRST_MQTT_TOPIC_BATT_VOLTAGE_RAW, batt.raw, true);
   mqtt_client.Publish(PRST_MQTT_TOPIC_RUNTIME, millis() - t0, true);
   mqtt_client.Publish(PRST_MQTT_TOPIC_BOOT_COUNT, boot_count, true);
@@ -66,9 +66,12 @@ void run() {
   mqtt_client.Publish(PRST_MQTT_TOPIC_ERROR_COUNT,
                       boot_count - clean_exit_count - 1, true);
 
-  delay(10);
-
   mqtt_client.FlushAndDisconnect();
+
+  // This shouldn't be necessary, but apparently we're missing some published
+  // messages.
+  delay(50);
+
   parasite::wifi::DisconnectWiFi();
   clean_exit_count++;
 }
@@ -79,7 +82,7 @@ void setup() {
 
   run();
 
-  // Go to deep sleep
+  // Go to sleep.
   adc_power_off();
   esp_sleep_enable_timer_wakeup(PRST_DS_TIME_TO_SLEEP_IN_SECONDS *
                                 kSToUSFactor);

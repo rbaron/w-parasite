@@ -42,14 +42,16 @@ bool MQTTClient::Loop() {
   return loop_ret;
 }
 
+// In theory, this function should wait until all data is
+// published, but it seems we're missing some messages.
+// https://github.com/knolleary/pubsubclient/issues/452
 bool MQTTClient::FlushAndDisconnect() {
   pubsub_client_.disconnect();
   // TODO: set up max tries so we don't loop ourselves out of battery on error.
   while (pubsub_client_.state() != -1) {
     serial_->println("[mqtt_client] Waiting for connection to be closed...");
-    delay(100);
+    delay(10);
   }
-  wifi_client_.flush();
   wifi_client_.stop();
   return true;
 }
@@ -59,6 +61,7 @@ void MQTTClient::Publish(const char* topic, const char* payload,
   serial_->printf("[mqtt_client] publish %s %s (retained: %d)\n", topic,
                   payload, retained);
   pubsub_client_.publish(topic, payload, retained);
+  wifi_client_.flush();
 }
 
 void MQTTClient::Publish(const char* topic, double payload, bool retained) {
