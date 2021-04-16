@@ -21,7 +21,7 @@
   "192.168.178.124"  // Prefer using IP addresses instead of hostnames. It saves
                      // time.
 #define PRST_MQTT_BROKER_PORT 1883
-#define PRST_MQTT_CONN_TIMEOUT 10 //Connection timeout in seconds
+#define PRST_MQTT_CONN_TIMEOUT 10 // Connection timeout in seconds
 
 // Macro for generating MQTT topics.
 #define PRST_MQTT_TOPIC(END) "home/" PRST_MQTT_CLIENT_ID END
