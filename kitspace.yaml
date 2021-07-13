@@ -1,0 +1,4 @@
+bom: kicad/parasite/1-click-bom.csv
+eda:
+    type: kicad
+    pcb: kicad/parasite/parasite.kicad_pcb
