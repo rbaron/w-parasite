@@ -1,3 +1,5 @@
+🚨 **This project is no longer recommended!** 🚨. Please check out the evolution of it - the [b-parasite](https://github.com/rbaron/b-parasite).
+
 # w-parasite
 
 ![Front](assets/photos/resized/front.jpg)
